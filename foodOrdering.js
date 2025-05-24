@@ -1,7 +1,7 @@
 // Login function to greet the cashier
 function login() {
-    let username = prompt("Enter cashier username:");
-    let password = prompt("Enter password: ")
+    let username = prompt("Enter cashier username:"); //prompt the user to enter their username
+    let password = prompt("Enter password: "); //prompt the user to enter their password
 
     let validUsername = "cashier";
     let validPassword = "password123";
@@ -141,7 +141,7 @@ function viewCart() {
         cartText += `${i + 1}. ${cart[i].Name} x${cart[i].Qty} - ₱${cart[i].Price * cart[i].Qty}\n`;
     }
 
-    let action = prompt(cartText + "\nOptions:\n1. Remove Item\n2. Back");
+    let action = prompt(cartText + "\nOptions:\n1. Remove Item\n2. Back"); //prompt the user to enter their choice
     if (action === "1") {
         let remove = parseInt(prompt("Enter item number to remove:")) - 1;
         if (remove >= 0 && remove < cart.length) {
